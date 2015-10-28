@@ -61,3 +61,5 @@ gulp.task('serve', function () {
 });
 
 gulp.task('play', ['ts', 'html', 'css', 'watch', 'serve']);
+
+gulp.task('default', ['play']);
