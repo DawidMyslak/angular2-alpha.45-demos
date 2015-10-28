@@ -1,0 +1,21 @@
+{
+  "name": "angular2-demos",
+  "version": "1.0.0",
+  "description": "Demos for Angular 2",
+  "author": "Dawid Myslak",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "systemjs": "0.19.5"
+  },
+  "devDependencies": {
+    "typescript": "^1.6.2",
+    "gulp": "^3.9.0",
+    "gulp-plumber": "~1.0.1",
+    "gulp-typescript": "~2.9.2",
+    "del": "^2.0.2",
+    "serve-static": "~1.10.0",
+    "connect": "^3.4.0",
+    "open": "0.0.5"
+  }
+}

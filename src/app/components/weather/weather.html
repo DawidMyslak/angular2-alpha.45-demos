@@ -1,0 +1,9 @@
+<h1>Weather</h1>
+
+<h3>Cork</h3>
+
+<div *ng-if="weather">
+	Temperature: {{weather.main.temp}}°C<br>
+	Wind: {{weather.wind.speed}} m/s<br>
+	Clouds: {{weather.clouds.all}}%<br>
+</div>
