@@ -12,6 +12,8 @@ export class WeatherComponent {
   
   constructor(weatherService: WeatherService) {
     console.log('constructor: WeatherComponent');
-    weatherService.getWeatherForCork(data => this.weather = data);
+    weatherService
+      .getWeatherForCork()
+      .subscribe(data => this.weather = data);
   }
 }

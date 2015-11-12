@@ -1,5 +1,8 @@
 import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {Http, Response} from 'angular2/http';
+
+const BASE_URL = 'http://api.openweathermap.org/data/2.5/weather';
+const API_TOKEN = '2de143494c0b295cca9337e1e96b00e0';
 
 @Injectable()
 export class WeatherService {
@@ -10,12 +13,8 @@ export class WeatherService {
     this.http = http;
   }
 
-  getWeatherForCork(callback) {
-    this.http.get('http://api.openweathermap.org/data/2.5/weather?q=Cork,ie&units=metric&appid=bd82977b86bf27fb59a04b61b657fb6f')
-      .map(res => res.json())
-      .subscribe(
-        data => callback(data),
-        err => console.log(err)
-      );
+  getWeatherForCork() {
+    return this.http.get(`${BASE_URL}?q=Cork,ie&units=metric&appid=${API_TOKEN}`)
+      .map((res: Response) => res.json());
   }
 }
